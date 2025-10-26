@@ -1,47 +1,68 @@
-# Movie Streaming Website
+# Filmid — Movie & TV Streaming (Ad-free)
 
-## Overview
-This project is a fully functional movie and TV series watching website that fetches data from The Movie Database (TMDB) API and uses VidKing embeds for content playback. The website features a modern and vibrant design, ensuring a responsive layout across various devices.
+A modern, responsive website for browsing and watching movies and TV shows without ads. Filmid aggregates metadata from The Movie Database (TMDB) and uses VidKing embeds for playback, delivering a clean, distraction-free viewing experience.
 
-## Project Structure
+## Key Features
+- Clean, responsive UI optimized for desktop and mobile.
+- Search and discover movies and TV series via TMDB.
+- Dynamic listings and detail pages for titles.
+- Embedded playback with VidKing for seamless viewing.
+- Lightweight front-end only — no server required for basic use.
+
+## Tech Stack
+- HTML, CSS, JavaScript
+- TMDB API (for metadata)
+- VidKing embeds (for playback)
+
+## Contents
 ```
-movie-streaming-website
-├── src
-│   ├── css
-│   │   └── styles.css
-│   ├── js
-│   │   ├── app.js
-│   │   ├── watch.js
-│   │   └── config.js
-│   ├── index.html
-│   └── watch.html
-├── assets
-│   └── icons
-├── .gitignore
-└── README.md
+/src
+  /css
+    styles.css
+  /js
+    app.js
+    watch.js
+    config.js
+  index.html
+  watch.html
+/assets
+  /icons
+.gitignore
+README.md
 ```
 
-## Features
-- **Search Functionality**: Users can search for movies and TV series using a search bar.
-- **Dynamic Listings**: The homepage displays listings fetched from the TMDB API based on user searches.
-- **Content Playback**: Users can watch selected movies and TV series using VidKing embeds on the watch page.
-- **Responsive Design**: The website is designed to be responsive, providing a seamless experience on both desktop and mobile devices.
-
-## Setup Instructions
+## Installation & Quick Start
 1. Clone the repository:
    ```
    git clone <repository-url>
    ```
-2. Navigate to the project directory:
+2. Open the project:
    ```
-   cd movie-streaming-website
+   cd filmid
    ```
-3. Open `src/index.html` in a web browser to view the homepage.
-4. Ensure you have a valid TMDB API key and update `src/js/config.js` with your key.
+3. Configure your TMDB API key:
+   - Edit `src/js/config.js` and set your TMDB API key.
+4. Serve or open the site:
+   - Open `src/index.html` in a browser, or run a simple static server (recommended):
+     ```
+     python3 -m http.server 8000
+     ```
+     Then visit `http://localhost:8000/src/`.
 
-## Usage
-- Use the search bar on the homepage to find movies or TV series.
-- Click on a listing to navigate to the watch page and view the content.
+## Configuration
+- TMDB API Key: required for search and metadata. Add the key in `src/js/config.js`.
+- VidKing: embeds are used as provided; ensure embeds comply with any usage terms.
+
+## Development
+- Modify CSS in `src/css/styles.css`.
+- Front-end logic in `src/js/app.js` and `src/js/watch.js`.
+- Use the browser console and network inspector to debug API calls.
+
+## Contributing
+Contributions are welcome. Please open issues for bugs or feature requests and submit pull requests with clear descriptions and tests where applicable.
 
 ## License
-This project is licensed under the MIT License.
+MIT License — see LICENSE file for details.
+
+## Contact
+For questions or feedback, open an issue in this repository.
