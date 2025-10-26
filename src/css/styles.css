@@ -67,6 +67,36 @@ body {
     height: 60px;
 }
 
+/* Remove visible nav/header box but keep the text visible */
+.header,
+.nav {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Ensure the logo text is horizontally centered */
+.header .nav,
+nav.nav {
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+}
+
+.logo,
+.nav .logo,
+.nav a.logo {
+    /* removed background: none !important; so the gradient text remains visible */
+    padding: 0 !important;
+    margin: 0 !important;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+}
+
 /* Logo & Header Styles */
 .logo-container {
     display: flex;
@@ -84,6 +114,8 @@ body {
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .logo::after {
@@ -169,7 +201,7 @@ nav {
     z-index: 1000;
     max-height: 80vh;
     overflow-y: auto;
-    padding: 1rem;
+    margin-top: 0.5rem;
 }
 
 .search-results-list {
@@ -184,11 +216,11 @@ nav {
     border-radius: 0.5rem;
     overflow: hidden;
     transition: transform 0.2s;
-    cursor: pointer;
+    height: 100%;
 }
 
 .search-result-item:hover {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
 }
 
 .result-poster {
@@ -198,7 +230,7 @@ nav {
 }
 
 .result-info {
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 .result-info h4 {
