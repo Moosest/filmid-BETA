@@ -1,68 +1,19 @@
-# Filmid — Movie & TV Streaming (Ad-free)
+## Filmid — Simple Movie & TV Streaming Site (Work in Progress)
 
-A modern, responsive website for browsing and watching movies and TV shows without ads. Filmid aggregates metadata from The Movie Database (TMDB) and uses VidKing embeds for playback, delivering a clean, distraction-free viewing experience.
+I made a simple website for watching movies and TV shows. It’s not finished and still pretty rough, but it works well enough to show the idea. I’m sharing it because maybe someone else will find it useful, just like I did while learning.
 
-## Key Features
-- Clean, responsive UI optimized for desktop and mobile.
-- Search and discover movies and TV series via TMDB.
-- Dynamic listings and detail pages for titles.
-- Embedded playback with VidKing for seamless viewing.
-- Lightweight front-end only — no server required for basic use.
+## What it is
 
-## Tech Stack
-- HTML, CSS, JavaScript
-- TMDB API (for metadata)
-- VidKing embeds (for playback)
+Search for movies and TV shows using the TMDB API, watch them using VidKing embeds, no ads, clean and minimal design, front-end only, no server required.
 
-## Contents
-```
-/src
-  /css
-    styles.css
-  /js
-    app.js
-    watch.js
-    config.js
-  index.html
-  watch.html
-/assets
-  /icons
-.gitignore
-README.md
-```
+## Tech stack
 
-## Installation & Quick Start
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
-2. Open the project:
-   ```
-   cd filmid
-   ```
-3. Configure your TMDB API key:
-   - Edit `src/js/config.js` and set your TMDB API key.
-4. Serve or open the site:
-   - Open `src/index.html` in a browser, or run a simple static server (recommended):
-     ```
-     python3 -m http.server 8000
-     ```
-     Then visit `http://localhost:8000/src/`.
+HTML, CSS, JavaScript, TMDB API for movie and series data, VidKing for video embeds.
 
-## Configuration
-- TMDB API Key: required for search and metadata. Add the key in `src/js/config.js`.
-- VidKing: embeds are used as provided; ensure embeds comply with any usage terms.
+## Folder structure
 
-## Development
-- Modify CSS in `src/css/styles.css`.
-- Front-end logic in `src/js/app.js` and `src/js/watch.js`.
-- Use the browser console and network inspector to debug API calls.
+/src /css styles.css /js app.js, watch.js, config.js index.html, watch.html /assets /icons .gitignore README.md
 
-## Contributing
-Contributions are welcome. Please open issues for bugs or feature requests and submit pull requests with clear descriptions and tests where applicable.
+## How to run
 
-## License
-MIT License — see LICENSE file for details.
-
-## Contact
-For questions or feedback, open an issue in this repository.
+Clone the repository with git clone <repository-url>, go into the project folder with cd filmid, add your TMDB API key to src/js/config.js, open src/index.html in your browser or run a simple server with python3 -m http.server 8000 and open http://localhost:8000/src/
